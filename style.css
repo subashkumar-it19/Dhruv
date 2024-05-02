@@ -1,0 +1,290 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  --font-family: "Book Antiqua", sans-serif;
+  --bg-color-header: black;
+  --text-color-header: white;
+  --hover-color: #04AA6D;
+  --bg-color-button: #04AA6D;
+  --bg-color-button-hover: #028a5e;
+  --bg-color-footer: black;
+  --text-color-footer: white;
+  --padding-default: 20px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--bg-color-header);
+  padding: var(--padding-default);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--text-color-header);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  color: var(--text-color-header);
+  cursor: pointer;
+  display: none; 
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 20px; 
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color-header);
+  font-size: 1rem;
+}
+
+.nav-menu a:hover {
+  color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block; 
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color-header);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex; 
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+  }
+
+  .nav-menu li {
+    margin-bottom: 10px; 
+    margin-right: 0; 
+  }
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: var(--padding-default);
+}
+
+.hero {
+  text-align: center;
+  padding: 40px; 
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: var(--bg-color-button);
+  color: var(--text-color-footer); 
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--bg-color-button-hover);
+}
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-item {
+  flex: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 50px; 
+  padding: var(--padding-default); 
+}
+
+.overview-item h3 {
+  color: Darkblue;
+  margin-bottom: 20px; 
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-color-footer);
+  color: var(--text-color-footer);
+  text-align: center;
+  padding: var(--padding-default); 
+}
+
+/* Adoption Pets */
+
+.adopt {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pet img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.pet-info {
+    flex-grow: 1;
+}
+
+h2 {
+    color: #333;
+}
+#adoptionStatus {
+    text-align: center;
+    font-weight: bold;
+}
+/* Care Cost */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Adoption Inquiry */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#confirmationMessage {
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    padding: var(--padding-default);
+}
+
+main form {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+}
+
+.modal-content {
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.adoption-message {
+  font-weight: bold; 
+  color: darkblue;    
+}
+
+
+.inquiry-message {
+  font-weight: bold; 
+  color: darkblue;  
+}

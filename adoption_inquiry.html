@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+  <script src="script.js" defer></script> <!-- Custom JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+</head>
+
+<body>
+  <!-- Header with Custom Navbar -->
+  <header data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-container">
+      <a class="logo" href="index.html">
+        <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+        Pet Adoption Center
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adoption_pets.html">Adoption Pets</a></li>
+          <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+          <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Centered Introduction -->
+  <center data-aos="zoom-in" data-aos-duration="1000">
+    <h1 style="color:#545966">Adoption Inquiry Form</h1>
+    <p style="color:#545966">Fill out the form below to inquire about adopting a pet</p>
+  </center>
+
+  <!-- Adoption Inquiry Form -->
+  <main data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    <form id="adoptionForm" style="width: 500px; margin: 0 auto;">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="pet">Select Pet:</label>
+      <select id="pet" name="pet" required>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="rabbit">Rabbit</option>
+      </select><br><br>
+
+      <label for="message">Message (optional):</label>
+      <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+      <button type="submit" class="button">Submit Inquiry</button>
+    </form>
+
+    <p id="confirmationMessage" style="display: none;">Thank you for your inquiry! We will get back to you soon.</p>
+  </main>
+	<div id="inquiryModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeInquiryModal()">&times;</span> <!-- Close button -->
+    <p id="inquiryMessage" class="inquiry-message"></p> <!-- Inquiry message will be shown here -->
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer >
+    <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

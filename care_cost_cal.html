@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+  <script src="script.js" defer></script> <!-- Custom JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+</head>
+<body>
+
+<!-- Header with Custom Navbar -->
+<header>
+  <div class="nav-container">
+    <a class="logo" href="index.html">
+      <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+      Pet Adoption Center
+    </a>
+    <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adoption_pets.html">Adoption Pets</a></li>
+        <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+        <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Pet Care Cost Calculator Section -->
+<section id="careCostCalculator" style="width: 500px; margin: 0 auto;" data-aos="fade-left" data-aos-delay="100">
+  <h1 style="color: #545966; text-align: center;">Pet Care Cost Calculator</h1>
+  <p style="color: #545966; text-align: center;">Calculate the total care cost for your pet</p>
+
+  <div>
+    <label for="petType">Select Pet Type:</label>
+    <select id="petType">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="rabbit">Rabbit</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="months">Enter Number of Months:</label>
+    <input type="number" id="months" min="1" value="1">
+  </div>
+
+  <div>
+    <label for="foodCost">Monthly Food Cost ($):</label>
+    <input type="number" id="foodCost" min="0" value="0">
+  </div>
+
+  <div>
+    <label for="medicalCost">Monthly Medical Cost ($):</label>
+    <input type="number" id="medicalCost" min="0" value="0">
+  </div>
+
+  <div>
+    <label for="otherCost">Other Monthly Costs ($):</label>
+    <input type="number" id="otherCost" min="0" value="0">
+  </div>
+
+  <div>
+    <button class="button" onclick="calculateCost()">Calculate</button>
+  </div>
+
+  <div id="result" style="margin-top: 20px; text-align: center;">
+    <p>Total Care Cost: <span id="totalCost">$0</span></p>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer style="text-align: center; margin-top: 50px;">
+  <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

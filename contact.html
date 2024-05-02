@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center - Contact Us</title>
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script> <!-- AOS JavaScript -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="script.js" defer></script> <!-- Your custom JavaScript -->
+</head>
+
+<body>
+  <!-- Header with Custom Navbar -->
+  <header data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-container">
+      <a class="logo" href="index.html">
+        <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+        Pet Adoption Center
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adoption_pets.html">Adoption Pets</a></li>
+          <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+          <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <main class="contact" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+    <section>
+      <h1 data-aos="fade-right" data-aos-delay="100">Contact Us</h1>
+      <p data-aos="fade-right" data-aos-delay="200">We're here to help. Fill out the form below to get in touch with us.</p>
+
+      <form id="contactForm" onsubmit="handleContactFormSubmit(event)">
+        <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="button" >Send Message</button>
+      </form>
+	  
+	  <p id="successMessage" style="display: none; color: Darkblue; text-align: center;">
+      Your message has been sent successfully! We will get back to you soon.
+    </p>
+	
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+  <script src="script.js" defer></script> <!-- Your custom JS -->
+</head>
+<body style="background-image: url('images/pet.jpg'); background-size: cover; background-position: center;">
+
+<!-- Header -->
+<header>
+  <div class="nav-container" data-aos="fade-down" data-aos-duration="800">
+    <a class="logo" href="index.html">
+      <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+      Pet Adoption Center
+    </a>
+    <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adoption_pets.html">Adoption Pets</a></li>
+        <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+        <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+    <h1>Welcome to the Pet Adoption Center</h1>
+    <p>Your new best friend is waiting for you!</p><br><br>
+    <a class="button" href="adoption_pets.html">View Available Pets</a>
+  </section><br><br>
+
+  <!-- Overview Section -->
+  <section class="overview">
+    <div class="overview-item" data-aos="fade-right" data-aos-duration="1000">
+      <h3>Adoption Pets</h3>
+      <p>Browse through our list of pets available for adoption.</p><br><br><br><br>
+      <a class="button" href="adoption_pets.html">Learn More</a>
+    </div>
+    <div class="overview-item" data-aos="fade-up" data-aos-duration="1000">
+      <h3>Care Cost Calculator</h3>
+      <p>Estimate the cost of caring for your new pet.</p><br><br><br><br>
+      <a class="button" href="care_cost_cal.html">Learn More</a>
+    </div>
+    <div class="overview-item" data-aos="fade-up" data-aos-duration="1000">
+      <h3>Adoption Inquiry</h3>
+      <p>Ready to adopt? Fill out our adoption inquiry form.</p><br><br><br><br>
+      <a class="button" href="adoption_inquiry.html">Learn More</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer >
+  <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

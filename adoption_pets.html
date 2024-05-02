@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+  <script src="script.js" defer></script> <!-- Custom JS -->
+</head>
+<body>
+  <!-- Header with Custom Navbar -->
+  <header data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-container">
+      <a class="logo" href="index.html">
+        <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+        Pet Adoption Center
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adoption_pets.html">Adoption Pets</a></li>
+          <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+          <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content with Adoption Information -->
+  <main class="adopt" data-aos="fade-right" data-aos-duration="1000">
+    <center data-aos="zoom-in" data-aos-delay="100">
+      <h1 style="color:#545966">Adoption Information</h1>
+      <p style="color:#545966">Meet our lovely pets available for adoption</p>
+    </center>
+
+    <section class="pet" data-aos="fade-left" data-aos-delay="200">
+      <img src="images/dog1.jpg" alt="Dog">
+      <div class="pet-info">
+        <h2>Dog - Bella</h2>
+        <p><strong>Breed:</strong> Golden Retriever</p>
+        <p><strong>Age:</strong> 3 years</p>
+        <p><strong>Gender:</strong> Female</p>
+        <p><strong>Location:</strong> Shelter</p>
+        <p><strong>Adoption Fee:</strong> $200</p>
+        <p><strong>Description:</strong> Bella is a friendly and playful dog. She loves long walks and cuddling on the couch.</p>
+        <button class="button" onclick="adoptPet('Bella')">Adopt Bella</button>
+		<button class="button" onclick="location.href='adoption_success.html'">Confirmation</button>
+      </div>
+    </section>
+
+    <section class="pet" data-aos="fade-right" data-aos-delay="300">
+      <img src="images/cat.jpg" alt="Cat">
+      <div class="pet-info">
+        <h2>Cat - Whiskers</h2>
+        <p><strong>Breed:</strong> Domestic Shorthair</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Gender:</strong> Male</p>
+        <p><strong>Location:</strong> Foster Home</p>
+        <p><strong>Adoption Fee:</strong> $150</p>
+        <p><strong>Description:</strong> Whiskers is an independent and affectionate cat. He enjoys napping in sunny spots and chasing toys.</p>
+        <button class="button" onclick="adoptPet('Whiskers')">Adopt Whiskers</button>
+		<button class="button" onclick="location.href='adoption_success.html'">Confirmation</button>
+      </div>
+    </section>
+
+    <section class="pet" data-aos="fade-down" data-aos-delay="400">
+      <img src="images/rabbit.jpg" alt="Rabbit">
+      <div class="pet-info">
+        <h2>Rabbit - Cottontail</h2>
+        <p><strong>Breed:</strong> Holland Lop</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Gender:</strong> Female</p>
+        <p><strong>Location:</strong> Shelter</p>
+        <p><strong>Adoption Fee:</strong> $100</p>
+        <p><strong>Description:</strong> Cottontail is a gentle and curious rabbit. She likes hopping around and munching on fresh veggies.</p>
+        <button class="button" onclick="adoptPet('Cottontail')">Adopt Cottontail</button>
+		<button class="button" onclick="location.href='adoption_success.html'">Confirmation</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Adoption Confirmation Modal -->
+ <div id="adoptionModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeAdoptionModal()">&times;</span> 
+    <p id="adoptionMessage" class="adoption-message"></p> 
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer >
+    <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

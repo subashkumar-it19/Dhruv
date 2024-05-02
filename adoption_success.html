@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+  <script src="script.js" defer></script> <!-- Custom JS -->
+</head>
+
+<body>
+  <!-- Header with Custom Navbar -->
+  <header data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-container">
+      <a class="logo" href="index.html">
+        <img src="images/logo.jpg" alt="Pet Adoption Center Logo" width="40" height="40">
+        Pet Adoption Center
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adoption_pets.html">Adoption Pets</a></li>
+          <li><a href="care_cost_cal.html">Care Cost Calculator</a></li>
+          <li><a href="adoption_inquiry.html">Adoption Inquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Adoption Success Message -->
+  <header data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+    <h1>Adoption Success!</h1>
+    <p>Congratulations on adopting our pet!</p>
+  </header>
+
+  <!-- Main Content with Success Message -->
+  <main data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    <section>
+      <h2>Thank You for Adopting!</h2>
+      <p>Your adoption has been processed successfully.</p>
+      <p>We will contact you soon with further details.</p>
+    </section>
+	<br><br>
+    <section>
+      <button class="button" onclick="redirectToHomepage()">Back to Homepage</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p>© 2024 Pet Adoption Center. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
